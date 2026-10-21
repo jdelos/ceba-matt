@@ -14,10 +14,11 @@ Multi-context setup: shared decisions live here; contract and DApp context docs 
 
 ## Repositories
 
-- Protocol: `/home/juli/Devel/kun-agent-workspace/projects/vsc-protocol` (`jdelos/vsc-protocol`)
-- DApp: `/home/juli/Devel/kun-agent-workspace/projects/ceba-dapp-clean` (`jdelos/ceba-dapp-clean`)
+- Protocol root: `workspace/repos/vsc-protocol` (`jdelos/vsc-protocol`)
+- DApp root: `workspace/repos/ceba-dapp-clean` (`jdelos/ceba-dapp-clean`)
+- Worktrees: `workspace/implementations/<feature>/<worktree>`
 
-Cross-repo changes need one coordination issue, explicit dependency edges, and compatibility checks in both repositories.
+Treat these nested repositories as canonical local roots. Do not use repositories outside this workspace. Cross-repo changes need one coordination issue, explicit dependency edges, and compatibility checks in both repositories.
 
 ## Audit rule
 

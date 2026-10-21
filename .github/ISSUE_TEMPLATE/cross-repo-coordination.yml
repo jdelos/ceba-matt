@@ -1,0 +1,68 @@
+---
+name: Cross-repository coordination
+description: Coordinate one change spanning VSC Protocol and CEBA DApp
+title: "[Cross-repo] "
+labels:
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Parent issue owns outcome. Source repositories own implementation.
+        Use full GitHub issue URLs everywhere.
+  - type: checkboxes
+    id: repositories
+    attributes:
+      label: Affected repositories
+      options:
+        - label: jdelos/vsc-protocol
+        - label: jdelos/ceba-dapp-clean
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: >-
+        Describe user-visible or system outcome, not implementation details.
+    validations:
+      required: true
+  - type: textarea
+    id: implementation-issues
+    attributes:
+      label: Implementation issues
+      description: >-
+        Add one full GitHub issue URL per affected source repository. Use
+        `pending` only while creating child issues.
+      placeholder: |-
+        - Protocol: https://github.com/jdelos/vsc-protocol/issues/123
+        - DApp: https://github.com/jdelos/ceba-dapp-clean/issues/456
+    validations:
+      required: true
+  - type: textarea
+    id: blocking-edges
+    attributes:
+      label: Blocking edges
+      description: >-
+        List full issue URLs and state what each issue blocks. Write `None`
+        when independent.
+      placeholder: >-
+        DApp issue URL is blocked by protocol issue URL.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility acceptance criteria
+      description: >-
+        Cover contract/API behavior, artifacts, network configuration, and
+        migration or rollback where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Acceptance evidence
+      description: >-
+        Name exact checks and user-visible flows that must pass across both
+        repositories.
+    validations:
+      required: true
