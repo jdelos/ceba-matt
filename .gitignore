@@ -1,0 +1,10 @@
+# Local nested repository checkouts and worktrees.
+/workspace/repos/*
+!/workspace/repos/.gitkeep
+
+/workspace/implementations/*
+!/workspace/implementations/.gitkeep
+
+# Local runtime state. May contain credentials and databases.
+/workspace/runtime/*
+!/workspace/runtime/.gitkeep
